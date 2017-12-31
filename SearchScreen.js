@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import { StyleSheet } from 'react-native';
-import Search from './Search';
+import SearchTab from './SearchTab';
 import Footers from './Footers';
-import {Container,Icon} from 'native-base';
+import {Container,Content,View,Icon} from 'native-base';
 
 
 class SearchScreen extends React.Component{
@@ -15,8 +15,8 @@ class SearchScreen extends React.Component{
     
 render(){
     return(
-        <Container>
-            <Search/>
+        <Container style={{backgroundColor:'white'}}>
+          <Content/>
             <Footers/>
             </Container>
     );
