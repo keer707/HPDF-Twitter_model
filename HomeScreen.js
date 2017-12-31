@@ -1,37 +1,33 @@
 import React,{Component} from 'react';
 import { StyleSheet } from 'react-native';
-import Headers from './Headers';
-import Footers from './Footers';
 import Timeline from './Timeline';
-import SearchScreen from './SearchScreen';
-import {Container, Fab,Icon } from 'native-base';
-import TabList from './App';
+import Footers from './Footers.js';
 
+//import SearchScreen from './SearchScreen';
+import {Container,Content, Fab,Icon } from 'native-base';
 class HomeScreen extends React.Component{
     static navigationOptions={
-        screen:HomeScreen,
-        tabBarLabel:'Home',
-        tabBarIcon:({tintColor})=>
-        (<Icon name="home" style={{color:tintColor}}/>),
-    }
+        
+         tabBarLabel:'Home',
+         tabBarIcon:({tintColor})=>
+         (<Icon name='home' style={{color:tintColor}}/>),
+     };
     
     
     render(){
        
 
         return(
-            
-            <Container>
-                <Headers/>
-                <Timeline/>
-                <Fab
-           
-            style={{ backgroundColor: 'skyblue', marginBottom: 30 }}
-            position="bottomRight">
-            <Icon name="add" />
+            <Container style={{backgroundColor:'white'}}>
+               <Content>
+               <Timeline/></Content>
+               <Fab
+            style={{ backgroundColor: '#007aff', marginBottom: 0}}
+            position="bottomRight" >
+            <Icon name='ios-leaf' />
             </Fab>
-                <Footers/>
-            </Container>
+               </Container> 
+           
         );
     };
 
