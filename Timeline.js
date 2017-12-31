@@ -4,16 +4,18 @@ import { Content, Card,CardItem,Left,Right,Thumbnail,Body,  Button, Icon, Text  
 
 
 
-const Timeline = () => {
+class Timeline extends Component {
+   
+  render() {
     
         return (  
           <Content> 
-             <Card>
+             <Card style={{elevation:1}}>
                <CardItem>
                  <Left>
                    <Thumbnail source={require('./pic1.jpg')} />
                    <Body >
-                     <Text style={{fontWeight:'bold',fontSize:20}}>Sivarajan</Text>
+                     <Text style={styles.name }>Sivarajan </Text>
                      <Text note>@siva66</Text>
                      <Text>Hi...there!!!</Text>  
                     </Body>
@@ -24,38 +26,39 @@ const Timeline = () => {
             </Button>
           </Right>
                </CardItem>
-               <CardItem cardBody>
-                    <Image source={require('./tt1.jpg')} style={{height: 200, width: 400,alignSelf:'flex-end' }}/>
-                  
+               <CardItem >
+                 <Body>
+                    <Image source={require('./tt1.jpg')} style={styles.images}/>
+                  </Body>
                 </CardItem>
                <CardItem style={{justifyContent: 'flex-end'}}>
     
                    <Button small iconLeft transparent>
-                     <Icon name="text" style={ styles.iconStyle } />
+                     <Icon name="ios-text-outline" style={ styles.iconStyle } />
                      <Text style={ styles.textStyle }>40</Text>
                    </Button>
     
                  <Button small iconLeft transparent>
-                    <Icon name="swap" style={ styles.iconStyle }/>
+                    <Icon name="ios-swap-outline" style={ styles.iconStyle }/>
                     <Text style={ styles.textStyle } >5</Text>
                   </Button>
     
                    <Button small iconLeft transparent>
-                     <Icon name="heart" style={ styles.iconStyle }/>
+                     <Icon name="ios-heart-outline" style={ styles.iconStyle }/>
                      <Text style={ styles.textStyle }>10</Text>
                    </Button>
     
                    <Button default small transparent>
-                     <Icon name="mail" style={ styles.iconStyle }/>
+                     <Icon name="ios-mail-outline" style={ styles.iconStyle }/>
                      </Button>
                </CardItem>
              </Card>
-             <Card>
+             <Card style={{elevation:1}}>
                <CardItem>
                  <Left>
                    <Thumbnail source={require('./pic2.jpg')} />
                    <Body >
-                     <Text style={{fontWeight:'bold',fontSize:20}}>Keerthi</Text>
+                     <Text style={styles.name}>Keerthi</Text>
                      <Text note>@keerthi8</Text>
                      <Text>Hi...there!!!</Text>  
                     </Body>
@@ -66,38 +69,39 @@ const Timeline = () => {
             </Button>
           </Right>
                </CardItem>
-               <CardItem cardBody>
-                    <Image source={require('./tt2.jpg')} style={{height: 200, width: 400,alignSelf:'flex-end' }}/>
-                  
+               <CardItem ><Body>
+                    <Image source={require('./tt2.jpg')} style={styles.images}/>
+                  </Body>
+
                 </CardItem>
                <CardItem style={{justifyContent: 'flex-end'}}>
     
                    <Button small iconLeft transparent>
-                     <Icon name="text" style={ styles.iconStyle } />
+                     <Icon name="ios-text-outline" style={ styles.iconStyle } />
                      <Text style={ styles.textStyle }>40</Text>
                    </Button>
     
                  <Button small iconLeft transparent>
-                    <Icon name="swap" style={ styles.iconStyle }/>
+                    <Icon name="ios-swap-outline" style={ styles.iconStyle }/>
                     <Text style={ styles.textStyle } >5</Text>
                   </Button>
     
                    <Button small iconLeft transparent>
-                     <Icon name="heart" style={ styles.iconStyle }/>
+                     <Icon name="ios-heart-outline" style={ styles.iconStyle }/>
                      <Text style={ styles.textStyle }>10</Text>
                    </Button>
     
                    <Button default small transparent>
-                     <Icon name="mail" style={ styles.iconStyle }/>
+                     <Icon name="ios-mail-outline" style={ styles.iconStyle }/>
                      </Button>
                </CardItem>
              </Card>
-             <Card>
+             <Card style={{elevation:1}}>
                <CardItem>
                  <Left>
                    <Thumbnail source={require('./pic3.jpg')} />
                    <Body >
-                     <Text style={{fontWeight:'bold',fontSize:20}}>Lokesh</Text>
+                     <Text style={styles.name}>Lokesh</Text>
                      <Text note>@lokesh</Text>
                      <Text>Hi...there!!!</Text>  
                     </Body>
@@ -108,38 +112,38 @@ const Timeline = () => {
             </Button>
           </Right>
                </CardItem>
-               <CardItem cardBody>
-                    <Image source={require('./tt3.jpg')} style={{height: 200, width: 400,alignSelf:'flex-end' }}/>
-                  
+               <CardItem><Body>
+                    <Image source={require('./tt3.jpg')} style={styles.images}/>
+               </Body>   
                 </CardItem>
                <CardItem style={{justifyContent: 'flex-end'}}>
     
                    <Button small iconLeft transparent>
-                     <Icon name="text" style={ styles.iconStyle } />
+                     <Icon name="ios-text-outline" style={ styles.iconStyle } />
                      <Text style={ styles.textStyle }>40</Text>
                    </Button>
     
                  <Button small iconLeft transparent>
-                    <Icon name="swap" style={ styles.iconStyle }/>
+                    <Icon name="ios-swap-outline" style={ styles.iconStyle }/>
                     <Text style={ styles.textStyle } >5</Text>
                   </Button>
     
                    <Button small iconLeft transparent>
-                     <Icon name="heart" style={ styles.iconStyle }/>
+                     <Icon name="ios-heart-outline" style={ styles.iconStyle }/>
                      <Text style={ styles.textStyle }>10</Text>
                    </Button>
     
                    <Button default small transparent>
-                     <Icon name="mail" style={ styles.iconStyle }/>
+                     <Icon name="ios-mail-outline" style={ styles.iconStyle }/>
                      </Button>
                </CardItem>
              </Card>
-             <Card>
+             <Card style={{elevation:1}}>
                <CardItem>
                  <Left>
                    <Thumbnail source={require('./pic4.jpg')} />
                    <Body >
-                     <Text style={{fontWeight:'bold',fontSize:20}}>Manoharan</Text>
+                     <Text style={styles.name}>Manoharan</Text>
                      <Text note>@mano8</Text>
                      <Text>Hi...there!!!</Text>  
                     </Body>
@@ -150,38 +154,38 @@ const Timeline = () => {
             </Button>
           </Right>
                </CardItem>
-               <CardItem cardBody>
-                    <Image source={require('./tt4.jpg')} style={{height: 200, width: 400,alignSelf:'flex-end' }}/>
-                  
+               <CardItem><Body>
+                    <Image source={require('./tt4.jpg')} style={styles.images}/>
+                 </Body> 
                 </CardItem>
                <CardItem style={{justifyContent: 'flex-end'}}>
     
                    <Button small iconLeft transparent>
-                     <Icon name="text" style={ styles.iconStyle } />
+                     <Icon name="ios-text-outline" style={ styles.iconStyle } />
                      <Text style={ styles.textStyle }>40</Text>
                    </Button>
     
                  <Button small iconLeft transparent>
-                    <Icon name="swap" style={ styles.iconStyle }/>
+                    <Icon name="ios-swap-outline" style={ styles.iconStyle }/>
                     <Text style={ styles.textStyle } >5</Text>
                   </Button>
     
                    <Button small iconLeft transparent>
-                     <Icon name="heart" style={ styles.iconStyle }/>
+                     <Icon name="ios-heart-outline" style={ styles.iconStyle }/>
                      <Text style={ styles.textStyle }>10</Text>
                    </Button>
     
                    <Button default small transparent>
-                     <Icon name="mail" style={ styles.iconStyle }/>
+                     <Icon name="ios-mail-outline" style={ styles.iconStyle }/>
                      </Button>
                </CardItem>
              </Card>
-             <Card>
+             <Card style={{elevation:1}}>
                <CardItem>
                  <Left>
                    <Thumbnail source={require('./pic5.jpg')} />
                    <Body >
-                     <Text style={{fontWeight:'bold',fontSize:20}}>Lisa</Text>
+                     <Text style={styles.name}>Lisa</Text>
                      <Text note>@lisa22</Text>
                      <Text>Hi...there!!!</Text>  
                     </Body>
@@ -192,29 +196,29 @@ const Timeline = () => {
             </Button>
           </Right>
                </CardItem>
-               <CardItem cardBody>
-                    <Image source={require('./tt5.jpg')} style={{height: 200, width: 400,alignSelf:'flex-end' }}/>
-                  
+               <CardItem><Body>
+                    <Image source={require('./tt5.jpg')} style={styles.images}/>
+                </Body>  
                 </CardItem>
                <CardItem style={{justifyContent: 'flex-end'}}>
     
                    <Button small iconLeft transparent>
-                     <Icon name="text" style={ styles.iconStyle } />
+                     <Icon name="ios-text-outline" style={ styles.iconStyle } />
                      <Text style={ styles.textStyle }>40</Text>
                    </Button>
     
                  <Button small iconLeft transparent>
-                    <Icon name="swap" style={ styles.iconStyle }/>
+                    <Icon name="ios-swap-outline" style={ styles.iconStyle }/>
                     <Text style={ styles.textStyle } >5</Text>
                   </Button>
     
                    <Button small iconLeft transparent>
-                     <Icon name="heart" style={ styles.iconStyle }/>
+                     <Icon name="ios-heart-outline" style={ styles.iconStyle }/>
                      <Text style={ styles.textStyle }>10</Text>
                    </Button>
     
                    <Button default small transparent>
-                     <Icon name="mail" style={ styles.iconStyle }/>
+                     <Icon name="ios-mail-outline" style={ styles.iconStyle }/>
                      </Button>
                </CardItem>
              </Card>
@@ -223,17 +227,28 @@ const Timeline = () => {
            
          );
         }
+    }
        
     
          const styles =StyleSheet.create({
               textStyle: {
-                paddingLeft: 5,
-                color: 'grey'
+                paddingLeft: 13,
+                color: 'grey',
               },
               iconStyle:{
                   color:'grey',
-                  paddingLeft: 5,
+                  paddingLeft: 13,
                   
+              },
+              name:{
+                fontWeight:'bold',
+                fontSize:20,
+              },
+              images:{
+                height: 170,
+                width: 310,
+                borderRadius:5,
+                alignSelf:'flex-end' 
               }
     
          });
