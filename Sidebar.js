@@ -6,92 +6,75 @@ import {
   Left,
   Right,
   Card,CardItem,
-  Text,Body,
+  Text,
   Container,
   Thumbnail,
   List,
   ListItem,
   Content,
   View,
-  Icon
+  Icon,Button
 } from "native-base";
-const routes = [{name: "Profile",icon: 'contact'},{name: "Lists", icon: 'list-box'},{name: "Moments",icon: 'thunderstorm'}, {name: 'Highlights',icon:'pricetags'} ];
 
-class Sidebar extends React.Component {
- 
-  
-
-
+class SideBar extends React.Component {
   render() {
     
     return (
+       
       <Container>
         <Content>
-        <Card>
+        <Card style={{elevation: 1}}>
             <CardItem >
-              <View style = {{flex: 1,
-        flexDirection: 'column', justifyContent: 'flex-end'}}>
-              
+              <View style = {{flex: 1, flexDirection: 'column', justifyContent: 'flex-end'}}>
               <Thumbnail source={require('./pic1.jpg')} />
-            
-              
-                
                   <Text style={{fontWeight: 'bold'}}>Keerthana Manoharan</Text>
-                  <Text note>@keer707</Text>
-                  
-              
+                  <Text note>@keer707</Text></View><Right>
+                    <Button transparent><Icon style={{color:'skyblue' }} name='ios-arrow-down'/></Button></Right></CardItem>
+                  <CardItem style={{borderBottomWidth:2}}>
             <View style = {{flexDirection: 'row'}} >
-              <Text>250 Following </Text>
-                  <Text >198 Followers</Text>
+              <Text style={{fontWeight: 'bold'}}>250 <Text note>Following</Text>  </Text>
+                  <Text style={{fontWeight: 'bold'}}>198 <Text note>Followers</Text> </Text>
                   </View>
-                  </View>
+             </CardItem></Card>
+             <Card style={{elevation: 1}}>
+             <CardItem>
+              <Icon name='ios-person-outline' />
+              <Text>Profile</Text>
              </CardItem>
+             <CardItem >
+              <Icon name='ios-list-box-outline' />
+              <Text>Lists</Text>
+             </CardItem>
+             <CardItem>
+              <Icon name='ios-thunderstorm-outline' />
+              <Text>Moments</Text>
+             </CardItem>
+             <CardItem>
+              <Icon name='ios-paper-outline' />
+              <Text>Highlights</Text>
+             </CardItem>
+        </Card><Card style={{elevation: 0}}>
            
-        
-          <CardItem style={{elevation: 2,borderBottomWidth: 4,borderTopWidth: 4}}>
-          <List
-            dataArray={routes}
-            renderRow={data => {
-              return (
-                <ListItem>
-                 
-                <Left>
-                <Icon name={data.icon}/>
-                
-              </Left>
-              <Body>
-              <Text>{data.name}</Text>
-              </Body>
-              <Right/>
-                
-                  
-                </ListItem>
-              );
-            }}
-          />
-          </CardItem>
           <CardItem >
-            <List>
-              <ListItem>
+            
                   <Text>Settings and Privacy</Text>               
-              </ListItem>
-              <ListItem>
+                  </CardItem><CardItem>    
                   <Text>Help Center</Text>               
-              </ListItem>
-            </List>
+             
           </CardItem>
           </Card>
-          <Footer >
-            <Left>
-             <Icon style={{ marginLeft: 5 }} name='moon'></Icon>
+          </Content>
+          <Footer style={{backgroundColor:'#fff',borderTopWidth:1,borderColor:'grey' }}>
+            <Left><Button transparent >
+             <Icon style={{ marginLeft: 20,color:'skyblue'}} name='ios-moon'></Icon></Button>
            </Left>
-            <Right>
-            <Icon style={{ marginRight: 5 }} name='qr-scanner'></Icon>
+            <Right><Button transparent  >
+            <Icon style={{ marginRight: 20,color:'skyblue' }} name='qr-scanner'></Icon></Button>
             </Right>
           </Footer>
-        </Content>
+       
       </Container>
     );
   }
 }
-export default Sidebar;
+export default SideBar;
